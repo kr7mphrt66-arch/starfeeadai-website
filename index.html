@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="StarFeed AI - Yapay zeka destekli beslenme, kalori ve makro takibi." />
+  <title>StarFeed AI</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: linear-gradient(180deg, #f7fbf8 0%, #ffffff 100%);
+      color: #17211c;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.35rem;
+      font-weight: 800;
+      text-decoration: none;
+      color: #17211c;
+    }
+
+    .logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: #35c96f;
+      color: white;
+      font-size: 24px;
+      box-shadow: 0 10px 28px rgba(53, 201, 111, 0.2);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: #4e5b54;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #e9f9ef;
+      color: #239a54;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(2.7rem, 7vw, 5rem);
+      line-height: 1.05;
+      margin-bottom: 24px;
+      letter-spacing: -0.04em;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 1.18rem;
+      color: #66736c;
+    }
+
+    .cta-group {
+      margin-top: 34px;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .btn-primary {
+      background: #35c96f;
+      color: white;
+      box-shadow: 0 14px 34px rgba(53, 201, 111, 0.24);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #253129;
+      border: 1px solid #dce5df;
+    }
+
+    .features {
+      padding: 50px 0 90px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #6b776f;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e5ece7;
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 12px 40px rgba(30, 55, 40, 0.05);
+    }
+
+    .card-icon {
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #6f7b74;
+    }
+
+    .notice {
+      margin: 10px auto 90px;
+      max-width: 860px;
+      padding: 24px;
+      border-radius: 18px;
+      background: #f4f8f5;
+      color: #59665f;
+      text-align: center;
+    }
+
+    footer {
+      border-top: 1px solid #e7ede9;
+      padding: 30px 0 45px;
+      color: #6c7871;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #4f5b54;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="/">
+          <span class="logo">★</span>
+          <span>StarFeed AI</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#features">Özellikler</a>
+          <a href="privacy.html">Gizlilik</a>
+          <a href="support.html">Destek</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="badge">AI destekli beslenme takibi</span>
+
+        <h1>Daha akıllı beslen.<br />Daha kolay takip et.</h1>
+
+        <p>
+          StarFeed AI, yemek fotoğraflarını analiz ederek tahmini kalori ve makro
+          değerlerini sunar; günlük beslenme hedeflerini ve ilerlemeni tek yerde takip etmene yardımcı olur.
+        </p>
+
+        <div class="cta-group">
+          <a class="btn btn-primary" href="#features">Özellikleri Keşfet</a>
+          <a class="btn btn-secondary" href="privacy.html">Gizlilik Politikası</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-title">
+          <h2>StarFeed AI ile neler yapabilirsin?</h2>
+          <p>Beslenme takibini daha hızlı ve anlaşılır hale getiren temel özellikler.</p>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <div class="card-icon">📷</div>
+            <h3>Fotoğraftan analiz</h3>
+            <p>
+              Yemeğinin fotoğrafını yükle, yapay zeka destekli tahmini kalori ve makro analizini görüntüle.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🎯</div>
+            <h3>Kişisel hedefler</h3>
+            <p>
+              Kilo, aktivite ve hedeflerine göre günlük beslenme ve makro hedeflerini takip et.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">📈</div>
+            <h3>İlerleme takibi</h3>
+            <p>
+              Kilo değişimini, günlük kayıtlarını ve beslenme geçmişini düzenli şekilde görüntüle.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="notice">
+        StarFeed AI tarafından sunulan kalori, makro ve beslenme değerleri tahmini bilgilerdir.
+        Uygulama tıbbi teşhis veya tedavi amacı taşımaz.
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2026 StarFeed AI. Tüm hakları saklıdır.</div>
+
+      <div class="footer-links">
+        <a href="privacy.html">Gizlilik Politikası</a>
+        <a href="support.html">Destek</a>
+        <a href="mailto:alkanyildiz21@gmail.com">İletişim</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
